@@ -47,7 +47,7 @@ a {
   justify-content: end;
   padding: 1em;
   color: white;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url("img/homeOfficeMain.jpg") center / cover no-repeat;
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url("img/homeOfficeMain.jpg") center / cover no-repeat; */
 }
 
 .hero-item {

@@ -1,9 +1,9 @@
 export const myBlogs = [
   {
-    img: "img/jordan.jpg",
-    alt: "picture of michael jordan on side of building",
-    date: "March 28, 2023",
-    title: "Chicago Bulls forever",
+    img: "img/homeOfficeMain.jpg",
+    alt: "picture of home office",
+    date: "April 10, 2023",
+    title: "My Journey to Software Development",
     text: "Cupcake ipsum dolor sit amet dragée carrot cake brownie. Gummies marzipan shortbread cotton candy tiramisu. Caramels bear claw toffee cake tart cake tootsie roll. Chocolate dragée tart pudding cupcake.",
   },
   {

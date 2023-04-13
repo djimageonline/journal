@@ -3,7 +3,7 @@ import { myBlogs } from "/data.js";
 function blogPageHTML() {
   let blogPageContent = "";
 
-  blogPageContent += `
+  blogPageContent = `
       <p >${myBlogs[0].date}</p>
       <p class="blog-title">${myBlogs[0].title}</p>
       <p class="blog-text">${myBlogs[0].text}</p>
