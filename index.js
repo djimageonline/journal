@@ -1,0 +1,1 @@
+import { myBlogs } from "./data";
