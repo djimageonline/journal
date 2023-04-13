@@ -5,38 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
+
+    <!-- styles & font links -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- header and nav -->
     <header>
       <a href="#">
         <p>📖 My Blog</p>
       </a>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">About</a></li>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="/">Home</a></li>
+          <li class="navbar-item"><a href="/">About</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="hero">
-        <p>April 10, 2023</p>
-        <h2>My journey to software development</h2>
-        <p>Cupcake ipsum dolor sit amet dragée carrot cake brownie. Gummies marzipan shortbread cotton candy tiramisu. Caramels bear claw toffee cake tart cake tootsie roll. Chocolate dragée tart pudding cupcake.
+      <!-- hero section  -->
+      <section class="hero" id="hero">
+        <p class="hero-date hero-item">April 10, 2023</p>
+        <h2 class="hero-title hero-item">My journey to software development</h2>
+        <p class="hero-text hero-item">Cupcake ipsum dolor sit amet dragée carrot cake brownie. Gummies marzipan shortbread cotton candy tiramisu. Caramels bear claw toffee cake tart cake tootsie roll. Chocolate dragée tart pudding cupcake.
         </p>
       </section>
-
-      <section class="blogs">
-        <div class="grid-container">
+      <!-- blogs -->
+      <section class="blogs-section" id="blogs-section">
+        <div class="blogs-grid-container" id="blogs-grid-container">
         </div>
-        <div class="recent-grid-container">
+        <div class="recent-grid-container" id="recent-grid-container">
         </div>
       </section>
-
     </main>
+    <!-- footer -->
     <footer>
-
+      <p>My Blog</p>
+      <p>Copyright &copy;2023</p>
     </footer>
     <script src="index.js" type="module"></script>
   </body>

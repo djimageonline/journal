@@ -1,5 +1,68 @@
+*,
+*::before, 
+*::after {
+  box-sizing: border-box
+}
+
 html, 
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    font-family: 'Source Sans Pro';
+}
+
+/* Header & nav */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-item{
+  list-style: none;
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar-item {
+  margin-right: 1em;
+  text-transform: uppercase;
+}
+
+/* Hero  */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  height: 25em;
+  justify-content: end;
+  padding: 1em;
+  color: white;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url("img/homeOfficeMain.jpg") center / cover no-repeat;
+}
+
+.hero-item {
+  margin: 0 0 .5em 0;
+}
+
+.hero-date {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 108.2%;
+  letter-spacing: -0.03em;
+}
+
+.hero-text {
+  font-weight: 400;
+  font-size: 16px;
 }
