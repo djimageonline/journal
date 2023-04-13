@@ -18,20 +18,24 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 0 1em ;
+  height: 3.6em;
 }
 
 .navbar-item{
   list-style: none;
   display: inline;
+  margin-right: 1em;
+  text-transform: uppercase;
 }
 
 a {
   text-decoration: none;
 }
 
-.navbar-item {
-  margin-right: 1em;
-  text-transform: uppercase;
+.title-main {
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 /* Hero  */
@@ -65,4 +69,62 @@ a {
 .hero-text {
   font-weight: 400;
   font-size: 16px;
+}
+
+/* Blog Section */
+
+.blogs-grid-container {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1f 1f;
+  grid-area: 
+  "image image"
+  "date ."
+  "title ."
+  "text text";
+  padding: 1em;
+  gap: 3em;
+}
+
+.image {
+  grid-area: image;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.date {grid-area: date;}
+.title {
+  grid-area: title;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.ptext {
+  grid-area: ptext;
+}
+
+.grid-item {
+  margin: 0 auto .5em auto;
+}
+
+
+/* Footer Section */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: small;
+  background-color: rgb(18, 17, 17);
+  color: white;
+  height: 6em;
+}
+
+footer p {
+  margin: 0;
+}
+
+.copyright {
+  font-weight: lighter;
 }
