@@ -7,6 +7,13 @@ export const myBlogs = [
     text: "Cupcake ipsum dolor sit amet dragée carrot cake brownie. Gummies marzipan shortbread cotton candy tiramisu. Caramels bear claw toffee cake tart cake tootsie roll. Chocolate dragée tart pudding cupcake.",
   },
   {
+    img: "img/jordan.jpg",
+    alt: "picture of michael jordan on side of building",
+    date: "March 28, 2023",
+    title: "Chicago Bulls forever",
+    text: "Cupcake ipsum dolor sit amet dragée carrot cake brownie. Gummies marzipan shortbread cotton candy tiramisu. Caramels bear claw toffee cake tart cake tootsie roll. Chocolate dragée tart pudding cupcake.",
+  },
+  {
     img: "img/hollywoodstudios.jpg",
     alt: "picture of toy story soldiers at hollywood studios",
     date: "Feb 28, 2023",
