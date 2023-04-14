@@ -1,17 +1,16 @@
 import { myBlogs } from "/data.js";
+let temp = [];
+temp = myBlogs.shift();
 
 function heroBlogSectionHtml() {
-  let heroBlog = [];
-  let tempBlog = [];
   let heroBlogHtml = "";
 
-  tempBlog = myBlogs;
-
   heroBlogHtml = `
-  <p class="hero-date hero-item">${tempBlog.date}</p>
+  <img class="hero-img" src="${temp.img}">
+  <p class="hero-date hero-item">${temp.date}</p>
   <h2 class="hero-title hero-item"><a href="blog.html
-    ">${tempBlog.title}</a></h2>
-  <p class="hero-text hero-item">${tempBlog.text}
+    ">${temp.title}</a></h2>
+  <p class="hero-text hero-item">${temp.text}
   </p>
   `;
 
@@ -19,13 +18,9 @@ function heroBlogSectionHtml() {
 }
 
 function blogsHtml() {
-  let myBlogsCopy = [];
   let blogs = "";
 
-  myBlogsCopy = myBlogs;
-  console.log(myBlogsCopy);
-
-  myBlogsCopy.forEach((blog) => {
+  myBlogs.forEach((blog) => {
     blogs += `
       <a href="/">
         <img class="image" src="${blog.img}" alt="${blog.alt}">
