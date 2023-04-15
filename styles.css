@@ -43,7 +43,7 @@ a {
 .hero {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 400px;
   color: white;
 }
 
@@ -134,19 +134,34 @@ a {
   "blog-date ." 
   "blog-title ."
   "blog-text blog-text"
-  "blog-image blog-image";
+  "blog-image blog-image"
+  "blog-subtitle ."
+  "blog-paragraph blog-paragraph"
+  "blog-subtitle-two ."
+  "blog-paragraph-two blog-paragraph-two"
+  ;
   padding: 1em;
 }
 
 .blog-date {grid-area: "blog-date";}
+.blog-title {
+  grid-area: "blog-title"; 
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+}
 .blog-text {grid-area: "blog-text";}
-.blog-title {grid-area: "blog-title";}
 .blog-image{
   grid-area: "blog-image";
   width: 100%;
   margin-bottom: 5px;
   border-radius: 5px;
 }
+
+.blog-subtitle {grid-area: "subtitle"; font-weight: bold; }
+.blog-paragraph {grid-area: "paragraph";}
+.blog-subtitle-two {grid-area: "blog-subtitle-two"; font-weight: bold;}
+.blog-paragraph-two {grid-area: "blog-paragraph-two";}
 
 /* Footer Section */
 
