@@ -1,6 +1,24 @@
 import { myBlogs } from "/data.js";
 
-function blogPageHTML() {
+function recentBlogs() {
+  let recentBlogsList = "";
+
+  // myBlogs.forEach((blog) => {
+  for (let index = 1; index < 4; index++) {
+    recentBlogsList += `
+    <h3>Recent Blogs</h3>
+  <a href="/">
+      <img class="image" src="${myBlogs[index].img}" alt="${myBlogs[index].alt}">
+      <p class="date grid-item">${myBlogs[index].date}</p>
+      <p class="title grid-item">${myBlogs[index].title}</p>
+      <p class="ptext grid-item">${myBlogs[index].text}</p>
+    </a>
+  `;
+  }
+  return recentBlogsList;
+}
+
+function blogPageHTML(blogitem) {
   let blogPageContent = "";
 
   blogPageContent = `
@@ -12,6 +30,9 @@ function blogPageHTML() {
       <p class="blog-paragraph">${myBlogs[0].paragraph}</p>
       <p class="blog-subtitle-two">${myBlogs[0].subtitleTwo}
       <p class="blog-paragraph-two">${myBlogs[0].paragraphTwo}</p>
+      <div class="recent-blogs">
+      ${recentBlogs()}
+      </div>
   `;
 
   return blogPageContent;

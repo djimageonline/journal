@@ -17,7 +17,7 @@ function heroBlogSectionHtml() {
   return heroBlogHtml;
 }
 
-function blogsHtml() {
+export function blogsHtml() {
   let blogs = "";
 
   myBlogs.forEach((blog) => {
