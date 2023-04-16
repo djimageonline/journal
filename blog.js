@@ -36,5 +36,6 @@ export function recentBlogs() {
   }
   document.getElementById("recent-posts").innerHTML = recentBlogsList;
 }
+
 recentBlogs();
 renderBlogsPage();

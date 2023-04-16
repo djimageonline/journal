@@ -38,6 +38,11 @@ a {
   font-size: 1.2rem;
 }
 
+.recent-blogs-headline, .view-more {
+  text-align: center;
+}
+
+
 /* Hero  */
 
 .hero {
@@ -49,7 +54,7 @@ a {
 
 .hero-item {
   color: white;
-  padding: 0 15px;
+  padding: 0 1em;
 }
 
 .hero-img {
@@ -63,7 +68,7 @@ a {
   position: absolute;
   bottom: 200px;
   font-weight: 400;
-  font-size: 12px;
+  font-size: .75rem;
 }
 
 .hero-title a{
@@ -73,7 +78,8 @@ a {
   width: 14em;
   letter-spacing: -0.03em;
   color: white;
-  padding-bottom: 1px;
+  padding-bottom: .06em;
+  line-height: 1;
   bottom: 120px;
 }
 
@@ -84,15 +90,22 @@ a {
 .hero-text {
   position: absolute;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   bottom: 20px;
 
 }
 
 /* Blog Section */
 
+.blog-page-content, 
+.blogs-grid-container, 
+.recent-posts,
+.about-page-content {
+  padding: 1.2em 2em 0 2em;
+}
+
+
 .blogs-grid-container, .recent-posts {
-  margin-top: 1em;
   display: grid;
   grid-template-columns: 1f;
   grid-template-areas: 
@@ -100,8 +113,11 @@ a {
   "date"
   "title"
   "ptext";
-  padding: 2em;
-  gap: 2em;
+  gap: 1.5em;
+}
+
+.recent-posts{
+  margin: 0;
 }
 
 .image {
@@ -138,10 +154,9 @@ a {
   "blog-image blog-image"
   "blog-subtitle ."
   "blog-paragraph blog-paragraph"
-  "blog-subtitle-two ."
-  "blog-paragraph-two ."
+  "blog-subtitle-two blog-subtitle-two"
+  "blog-paragraph-two blog-paragraph-two"
   ;
-  padding: 2em;
 }
 
 .blog-date {grid-area: blog-date;}
@@ -164,15 +179,12 @@ a {
 .blog-subtitle-two {grid-area: blog-subtitle-two; font-weight: bold;}
 .blog-paragraph-two {grid-area: blog-paragraph-two;}
 
-.blogs-section h3, .about-section h3 {
-  text-align: center;
-}
 
 /* About Page CSS */
 
 .about-page-content {
   display: grid;
-  grid-template-columns: 1f;
+  grid-template-columns: 1fr;
   grid-template-areas:
   "profile-pic" 
   "about-title"
@@ -182,7 +194,6 @@ a {
   "about-subtitle-two"
   "about-paragraph-two"
   ;
-  padding: 2em;
 }
 
 .profile-pic {
@@ -227,17 +238,34 @@ footer p {
   font-weight: lighter;
 }
 
+@media (max-width: 389px ){
+  .hero-date {
+    bottom: 200px;
+  }
+  
+  .hero-title a{
+    bottom: 140px;
+    width: 10em;
+  }
+  
+  .hero-text {
+    bottom: 20px;
+  }
+
+
+}
+
 @media (min-width: 800px) {
 
   .hero-item {
-    padding: 0 40px;
+    padding: 0 2.5em;
     width: 700px;
   }
 
   .hero {
     height: 450px;
   }
-  
+
   .blogs-grid-container, .recent-posts {
     margin-top: 1em;
     display: grid;
@@ -247,8 +275,6 @@ footer p {
     "date "
     "title"
     "ptext";
-    padding: 2em;
-    grid-gap: 2em;
   }
 
   .blog-page-content {
@@ -264,22 +290,42 @@ footer p {
     ". blog-subtitle-two . ."
     ". blog-paragraph-two blog-paragraph-two ."
     ;
-    padding: 2em;
   }
   
   .about-page-content {
     display: grid;
-    grid-template-columns: 1f;
+    grid-template-columns: 5em .8fr 1fr 1fr 1fr 5em;
     grid-template-areas:
-    "profile-pic" 
-    "about-title"
-    "about-intro"
-    "about-subtitle"
-    "about-paragraph"
-    "about-subtitle-two"
-    "about-paragraph-two"
+    "profile-pic . about-title about-title about-title about-title"
+    "profile-pic . about-intro about-intro about-intro about-intro" 
+    " . . . . . . "
+    ". about-subtitle about-subtitle about-subtitle about-subtitle ."
+    ". about-paragraph about-paragraph about-paragraph about-paragraph ."
+    ". about-subtitle-two  about-subtitle-two about-subtitle-two  about-subtitle-two ." 
+    ". about-paragraph-two about-paragraph-two about-paragraph-two about-paragraph-two ."
     ;
-    padding: 2em;
   }
-  
+
+  .profile-pic {
+    grid-area: profile-pic;
+    border-radius: 50%;
+    width: 182px;
+  }
+
+}
+
+@media (min-width: 1000px) { 
+  .about-page-content {
+    display: grid;
+    grid-template-columns: 5em .7fr 1fr 1fr 1fr 5em;
+    grid-template-areas:
+    "profile-pic . about-title about-title about-title about-title"
+    "profile-pic . about-intro about-intro about-intro about-intro" 
+    " . . . . . . "
+    ". about-subtitle about-subtitle about-subtitle about-subtitle ."
+    ". about-paragraph about-paragraph about-paragraph about-paragraph ."
+    ". about-subtitle-two  about-subtitle-two about-subtitle-two  about-subtitle-two ." 
+    ". about-paragraph-two about-paragraph-two about-paragraph-two about-paragraph-two ."
+    ;
+  }
 }
