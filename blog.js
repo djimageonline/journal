@@ -1,22 +1,5 @@
 import { myBlogs } from "/data.js";
 
-export function recentBlogs() {
-  let recentBlogsList = "";
-
-  for (let index = 1; index < 4; index++) {
-    recentBlogsList += `
-  <a href="/">
-      <img class="image" src="${myBlogs[index].img}" alt="${myBlogs[index].alt}">
-      <p class="date grid-item">${myBlogs[index].date}</p>
-      <p class="title grid-item">${myBlogs[index].title}</p>
-      <p class="ptext grid-item">${myBlogs[index].text}</p>
-    </a>
-  `;
-  }
-  document.getElementById("recent-posts").innerHTML = recentBlogsList;
-}
-recentBlogs();
-
 function blogPageHTML(blogitem) {
   let blogPageContentHTML = "";
 
@@ -38,4 +21,20 @@ function renderBlogsPage() {
   document.getElementById("blog-page-content").innerHTML = blogPageHTML();
 }
 
+export function recentBlogs() {
+  let recentBlogsList = "";
+
+  for (let index = 1; index < 4; index++) {
+    recentBlogsList += `
+  <a href="/">
+      <img class="image" src="${myBlogs[index].img}" alt="${myBlogs[index].alt}">
+      <p class="date grid-item">${myBlogs[index].date}</p>
+      <p class="title grid-item">${myBlogs[index].title}</p>
+      <p class="ptext grid-item">${myBlogs[index].text}</p>
+    </a>
+  `;
+  }
+  document.getElementById("recent-posts").innerHTML = recentBlogsList;
+}
+recentBlogs();
 renderBlogsPage();

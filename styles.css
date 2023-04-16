@@ -151,7 +151,7 @@ a {
   font-size: 2rem;
   margin: 0;
 }
-.blog-text {grid-area: blog-text;}
+.blog-text {grid-area: blog-text; margin-bottom: 30px;}
 .blog-image{
   grid-area: blog-image;
   width: 100%;
@@ -187,7 +187,7 @@ a {
 
 .profile-pic {
   grid-area: profile-pic;
-  max-width: 50%;
+  width: 182px;
   margin-bottom: 10px;
   border-radius: 50%;
 }
@@ -228,6 +228,16 @@ footer p {
 }
 
 @media (min-width: 800px) {
+
+  .hero-item {
+    padding: 0 40px;
+    width: 700px;
+  }
+
+  .hero {
+    height: 450px;
+  }
+  
   .blogs-grid-container, .recent-posts {
     margin-top: 1em;
     display: grid;
@@ -241,4 +251,35 @@ footer p {
     grid-gap: 2em;
   }
 
+  .blog-page-content {
+    display: grid;
+    grid-template-columns: 4em 1fr 1fr 4em;
+    grid-template-areas:
+    ". blog-date . ." 
+    ". blog-title blog-title ."
+    ". blog-text blog-text ."
+    "blog-image blog-image blog-image blog-image"
+    ". blog-subtitle . ."
+    ". blog-paragraph blog-paragraph ."
+    ". blog-subtitle-two . ."
+    ". blog-paragraph-two blog-paragraph-two ."
+    ;
+    padding: 2em;
+  }
+  
+  .about-page-content {
+    display: grid;
+    grid-template-columns: 1f;
+    grid-template-areas:
+    "profile-pic" 
+    "about-title"
+    "about-intro"
+    "about-subtitle"
+    "about-paragraph"
+    "about-subtitle-two"
+    "about-paragraph-two"
+    ;
+    padding: 2em;
+  }
+  
 }
