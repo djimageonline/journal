@@ -90,7 +90,7 @@ a {
 
 /* Blog Section */
 
-.blogs-grid-container {
+.blogs-grid-container, .recent-posts {
   margin-top: 1em;
   display: grid;
   grid-template-columns: 1f 1f;
@@ -127,7 +127,7 @@ a {
 
 /* Blog Page CSS */
 
-.main-clicked-blog {
+.main-clicked-blog, .blog-page-content {
   display: grid;
   grid-template-columns: 1f 1f;
   grid-area:
@@ -140,7 +140,7 @@ a {
   "blog-subtitle-two ."
   "blog-paragraph-two blog-paragraph-two"
   ;
-  padding: 1em;
+  padding: 2em;
 }
 
 .blog-date {grid-area: "blog-date";}
@@ -162,6 +162,47 @@ a {
 .blog-paragraph {grid-area: "paragraph";}
 .blog-subtitle-two {grid-area: "blog-subtitle-two"; font-weight: bold;}
 .blog-paragraph-two {grid-area: "blog-paragraph-two";}
+
+.blogs-section h3, .about-section h3 {
+  text-align: center;
+}
+
+/* About Page CSS */
+
+.about-page-content {
+  display: grid;
+  grid-template-columns: 1f 1f;
+  grid-area:
+  "profile-pic ." 
+  "about-title ."
+  "about-intro about-intro"
+  "about-subtitle ."
+  "about-paragraph about-paragraph"
+  "about-subtitle-two ."
+  "about-paragraph-two about-paragraph-two"
+  ;
+  padding: 2em;
+}
+
+.profile-pic {
+  grid-area: "profile-pic ";
+  width: 50%;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+.about-title {
+  grid-area: "about-title"; 
+  font-weight: bold;
+  font-size: 2rem;
+  width: 80% ;
+  margin: 0;
+}
+.about-intro { grid-area: "about-intro ";}
+
+.about-subtitle {grid-area: "about-subtitle"; font-weight: bold; }
+.about-paragraph {grid-area: "about-paragraph";}
+.about-subtitle-two {grid-area: "about-subtitle"; font-weight: bold;}
+.about-paragraph-two {grid-area: "about-paragraph-two";}
 
 /* Footer Section */
 

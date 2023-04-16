@@ -1,12 +1,10 @@
 import { myBlogs } from "/data.js";
 
-function recentBlogs() {
+export function recentBlogs() {
   let recentBlogsList = "";
 
-  // myBlogs.forEach((blog) => {
   for (let index = 1; index < 4; index++) {
     recentBlogsList += `
-    <h3>Recent Blogs</h3>
   <a href="/">
       <img class="image" src="${myBlogs[index].img}" alt="${myBlogs[index].alt}">
       <p class="date grid-item">${myBlogs[index].date}</p>
@@ -15,8 +13,9 @@ function recentBlogs() {
     </a>
   `;
   }
-  return recentBlogsList;
+  document.getElementById("recent-posts").innerHTML = recentBlogsList;
 }
+recentBlogs();
 
 function blogPageHTML(blogitem) {
   let blogPageContent = "";
@@ -30,16 +29,13 @@ function blogPageHTML(blogitem) {
       <p class="blog-paragraph">${myBlogs[0].paragraph}</p>
       <p class="blog-subtitle-two">${myBlogs[0].subtitleTwo}
       <p class="blog-paragraph-two">${myBlogs[0].paragraphTwo}</p>
-      <div class="recent-blogs">
-      ${recentBlogs()}
-      </div>
   `;
 
   return blogPageContent;
 }
 
 function renderBlogsPage() {
-  document.getElementById("main-clicked-blog").innerHTML = blogPageHTML();
+  document.getElementById("blog-page-content").innerHTML = blogPageHTML();
 }
 
 renderBlogsPage();
