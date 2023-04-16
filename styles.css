@@ -61,7 +61,7 @@ a {
 
 .hero-date {
   position: absolute;
-  bottom: 160px;
+  bottom: 200px;
   font-weight: 400;
   font-size: 12px;
 }
@@ -73,8 +73,8 @@ a {
   width: 14em;
   letter-spacing: -0.03em;
   color: white;
-  padding-bottom: 2px;
-  bottom: 80px;
+  padding-bottom: 1px;
+  bottom: 120px;
 }
 
 .hero-title a:visited{
@@ -85,7 +85,8 @@ a {
   position: absolute;
   font-weight: 400;
   font-size: 16px;
-  bottom: 5px;
+  bottom: 20px;
+
 }
 
 /* Blog Section */
@@ -93,30 +94,30 @@ a {
 .blogs-grid-container, .recent-posts {
   margin-top: 1em;
   display: grid;
-  grid-template-columns: 1f 1f;
-  grid-area: 
-  "image image"
-  "date ."
-  "title ."
-  "text text";
+  grid-template-columns: 1f;
+  grid-template-areas: 
+  "image"
+  "date"
+  "title"
+  "ptext";
   padding: 2em;
-  gap: 3em;
+  gap: 2em;
 }
 
 .image {
-  grid-area: "image";
-  width: 100%;
+  grid-area: image;
+  max-width: 100%;
   margin-bottom: 5px;
   border-radius: 5px;
 }
-.date {grid-area: "date";}
+.date {grid-area: date;}
 .title {
-  grid-area: "title";
+  grid-area: title;
   font-size: 1.5em;
   font-weight: 700;
 }
 .ptext {
-  grid-area: "ptext";
+  grid-area: ptext;
   line-height: 1.25;
 }
 
@@ -127,41 +128,41 @@ a {
 
 /* Blog Page CSS */
 
-.main-clicked-blog, .blog-page-content {
+.blog-page-content {
   display: grid;
   grid-template-columns: 1f 1f;
-  grid-area:
+  grid-template-areas:
   "blog-date ." 
-  "blog-title ."
+  "blog-title blog-title"
   "blog-text blog-text"
   "blog-image blog-image"
   "blog-subtitle ."
   "blog-paragraph blog-paragraph"
   "blog-subtitle-two ."
-  "blog-paragraph-two blog-paragraph-two"
+  "blog-paragraph-two ."
   ;
   padding: 2em;
 }
 
-.blog-date {grid-area: "blog-date";}
+.blog-date {grid-area: blog-date;}
 .blog-title {
-  grid-area: "blog-title"; 
+  grid-area: blog-title; 
   font-weight: bold;
   font-size: 2rem;
   margin: 0;
 }
-.blog-text {grid-area: "blog-text";}
+.blog-text {grid-area: blog-text;}
 .blog-image{
-  grid-area: "blog-image";
+  grid-area: blog-image;
   width: 100%;
   margin-bottom: 5px;
   border-radius: 5px;
 }
 
-.blog-subtitle {grid-area: "subtitle"; font-weight: bold; }
-.blog-paragraph {grid-area: "paragraph";}
-.blog-subtitle-two {grid-area: "blog-subtitle-two"; font-weight: bold;}
-.blog-paragraph-two {grid-area: "blog-paragraph-two";}
+.blog-subtitle {grid-area: blog-subtitle; font-weight: bold; }
+.blog-paragraph {grid-area: blog-paragraph;}
+.blog-subtitle-two {grid-area: blog-subtitle-two; font-weight: bold;}
+.blog-paragraph-two {grid-area: blog-paragraph-two;}
 
 .blogs-section h3, .about-section h3 {
   text-align: center;
@@ -171,38 +172,38 @@ a {
 
 .about-page-content {
   display: grid;
-  grid-template-columns: 1f 1f;
-  grid-area:
-  "profile-pic ." 
-  "about-title ."
-  "about-intro about-intro"
-  "about-subtitle ."
-  "about-paragraph about-paragraph"
-  "about-subtitle-two ."
-  "about-paragraph-two about-paragraph-two"
+  grid-template-columns: 1f;
+  grid-template-areas:
+  "profile-pic" 
+  "about-title"
+  "about-intro"
+  "about-subtitle"
+  "about-paragraph"
+  "about-subtitle-two"
+  "about-paragraph-two"
   ;
   padding: 2em;
 }
 
 .profile-pic {
-  grid-area: "profile-pic ";
-  width: 50%;
+  grid-area: profile-pic;
+  max-width: 50%;
   margin-bottom: 10px;
   border-radius: 50%;
 }
 .about-title {
-  grid-area: "about-title"; 
+  grid-area: about-title; 
   font-weight: bold;
   font-size: 2rem;
   width: 80% ;
   margin: 0;
 }
-.about-intro { grid-area: "about-intro ";}
+.about-intro { grid-area: about-intro;}
 
-.about-subtitle {grid-area: "about-subtitle"; font-weight: bold; }
-.about-paragraph {grid-area: "about-paragraph";}
-.about-subtitle-two {grid-area: "about-subtitle"; font-weight: bold;}
-.about-paragraph-two {grid-area: "about-paragraph-two";}
+.about-subtitle {grid-area: about-subtitle; font-weight: bold; }
+.about-paragraph {grid-area: about-paragraph;}
+.about-subtitle-two {grid-area: about-subtitle-two; font-weight: bold;}
+.about-paragraph-two {grid-area: about-paragraph-two;}
 
 /* Footer Section */
 
@@ -224,4 +225,20 @@ footer p {
 
 .copyright {
   font-weight: lighter;
+}
+
+@media (min-width: 800px) {
+  .blogs-grid-container, .recent-posts {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "image"
+    "date "
+    "title"
+    "ptext";
+    padding: 2em;
+    grid-gap: 2em;
+  }
+
 }

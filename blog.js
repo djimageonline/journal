@@ -18,10 +18,10 @@ export function recentBlogs() {
 recentBlogs();
 
 function blogPageHTML(blogitem) {
-  let blogPageContent = "";
+  let blogPageContentHTML = "";
 
-  blogPageContent = `
-      <p >${myBlogs[0].date}</p>
+  blogPageContentHTML = `
+      <p class="blog-date">${myBlogs[0].date}</p>
       <p class="blog-title">${myBlogs[0].title}</p>
       <p class="blog-text">${myBlogs[0].text}</p>
       <img class="blog-image" src="${myBlogs[0].img}" alt="${myBlogs[0].alt}">
@@ -31,7 +31,7 @@ function blogPageHTML(blogitem) {
       <p class="blog-paragraph-two">${myBlogs[0].paragraphTwo}</p>
   `;
 
-  return blogPageContent;
+  return blogPageContentHTML;
 }
 
 function renderBlogsPage() {
