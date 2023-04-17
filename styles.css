@@ -75,12 +75,12 @@ a {
   position: absolute;
   font-weight: 700;
   font-size: 2rem;
-  width: 14em;
+  width: 10em;
   letter-spacing: -0.03em;
   color: white;
   padding-bottom: .06em;
   line-height: 1;
-  bottom: 120px;
+  bottom: 140px;
 }
 
 .hero-title a:visited{
@@ -103,7 +103,6 @@ a {
 .about-page-content {
   padding: 1.2em 2em 0 2em;
 }
-
 
 .blogs-grid-container, .recent-posts {
   display: grid;
@@ -242,12 +241,7 @@ footer p {
   .hero-date {
     bottom: 200px;
   }
-  
-  .hero-title a{
-    bottom: 140px;
-    width: 10em;
-  }
-  
+    
   .hero-text {
     bottom: 20px;
   }
